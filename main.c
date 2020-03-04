@@ -4,38 +4,91 @@ int main()
 {
     printf("Hello World\n");
     
-    
-    motor(0,100);  //drive forward
+    motor(0,100);//forward
     motor(3,100);
-    msleep(1000);
+    msleep(2900); 
     
-    enable_servos(); 
-    set_servo_position(3,392);//open claw
-    msleep(1500);
-    set_servo_position(3,1934);//close claw
-    msleep(50);
     ao();
     msleep(500);
-
-	motor(3,-100); //drive backward
-    motor(0,-100);
-    msleep(50);
     
-    set_servo_position (0,875); //claw straight position
-    msleep(50);
-    ao();
+    motor(0,100);//turn left
+    motor(3,-100);
+    msleep(2000);
     
-    motor(3,-100); //drive backward with a right turn
-    motor(0,-80);
-    msleep(3200);
     ao();
-set_servo_position ( 3,392); //open claw
-  msleep(500);
+    msleep(500);	
+   
+    
+    motor(0,100);//forward
+    motor(3,100);
+    msleep(1200);
+    
     ao();
     msleep(500);
    
     
+    motor(0,-100);//turn right
+    motor(3,100);
+    msleep(625);
+    
+    ao();
+    msleep(500);
+    
+    motor(0,100);//forward
+    motor(3,100);
+    msleep(3050);
+   
+    
+    ao();
+    msleep(500);
+    
+    motor(0,-100);//backwards
+    motor(3,-100);
+    msleep(1500);
+    
+    motor(0,100);//turn left
+    motor(3,10);
+    msleep(750);
+    
+    ao();
+    msleep(500);
+    
+    
+    motor(0,100);//forward
+    motor(3,100);
+    msleep(1030);
+    
+    motor(0,100);//turn left
+    motor(3,20);
+    msleep(3000);
+    
+    ao();
+    msleep(500);
+    
+    
+    motor(0,100);//forward
+    motor(3,100);
+    msleep(2000);
+    
+    ao();
+    msleep(500);
+    
+    
+    motor(0,100);//turn left
+    motor(3,5);
+    msleep(1000);
+
+   
+    ao();
+    msleep(500);
+    
+    motor(0,100);//forward
+    motor(3,100);
+    msleep(1500);
+    
+    ao();
+    msleep(500);
+    
     
     return 0;
 }
-
